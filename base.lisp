@@ -82,13 +82,13 @@
   (lml-write-char #\newline))
 
 
-(defmacro html-file-page ((out-file &key (format :xhtml11))
+(defmacro html-file-page ((out-file &key (format :xhtml11) (encoding :utf-8))
                           &body body)
   `(with-open-file (*html-stream*
                     (lml-file-name ',out-file :output)
                     :direction :output
                     :if-exists :supersede)
-     (dtd-prologue ,format)
+     (dtd-prologue ,format ,encoding)
      (html
       ((:html :xmlns "http://www.w3.org/1999/xhtml")
        ,@body))))
