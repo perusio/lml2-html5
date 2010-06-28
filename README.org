@@ -11,19 +11,16 @@ new tags and attributtes.
 This fork was created from the [[http://packages.debian.org/sid/cl-lml2][Debian unstable]] cl-lml2 package.
 
 To use the HTML5 document type give as first argument to
-=html-file-page= the following
+=html-file-page= the following:
 
-#begin_src lisp
- (html-file-page (<other args> :format :html5 <more args>)
-#end_src
+
+=(html-file-page (<other args> :format :html5 <more args>)=
 
 Besides supporting HTML5 this fork also supports specifying the
 encoding through the keyword argument =:encoding= to =html-file-page=.
 
 To declare a *XHTML 1.0 Strict* document you would give:
 
-#begin_src lisp
- (html-file-page (<other args> :format :xhtml-strict :encoding :utf-8
- <more args>) 
-#end_src 
+=(html-file-page (<other args> :format :xhtml-strict :encoding :utf-8 <more args>)=
+
 
