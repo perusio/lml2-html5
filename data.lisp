@@ -44,3 +44,6 @@
 
 (defvar +xhtml10-frameset-dtd-string+
   "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml10/DTD/xhtml10-frameset.dtd\"")
+
+(defvar +html5-dtd-string+
+  "<!DOCTYPE html>")

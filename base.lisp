@@ -68,7 +68,9 @@
        (:xhtml10-transitional
         (lml-write-string +xhtml10-transitional-dtd-string+))
        (:xhtml10-frameset
-        (lml-write-string +xhtml10-frameset-dtd-string+)))
+        (lml-write-string +xhtml10-frameset-dtd-string+))
+       (:html5
+        (lml-write-string +html5-dtd-string+)))
      (when entities
        (lml-write-char #\space)
        (lml-write-char #\[)
