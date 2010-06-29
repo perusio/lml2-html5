@@ -802,7 +802,20 @@
 
 (def-std-html :xmp      t nil)
 
-
+;;; HTML5 new tags.
+(def-std-html :article t nil)
+(def-std-html :aside t nil)
+(def-std-html :audio t nil)
+(def-std-html :figure t nil)
+(def-std-html :footer t nil)
+(def-std-html :header t nil)
+(def-std-html :hgroup t nil)
+(def-std-html :mark t nil)
+(def-std-html :nav t nil)
+(def-std-html :section t nil)
+(def-std-html :source nil nil)
+(def-std-html :time t nil)
+(def-std-html :video t nil)
 
 
 ;;; KMR Local Additions

@@ -68,9 +68,7 @@
        (:xhtml10-transitional
         (lml-write-string +xhtml10-transitional-dtd-string+))
        (:xhtml10-frameset
-        (lml-write-string +xhtml10-frameset-dtd-string+))
-       (:html5
-        (lml-write-string +html5-dtd-string+)))
+        (lml-write-string +xhtml10-frameset-dtd-string+)))
      (when entities
        (lml-write-char #\space)
        (lml-write-char #\[)
@@ -79,6 +77,8 @@
        (lml-write-char #\Newline)
        (lml-write-char #\]))
      (lml-write-char #\>))
+    (:html5
+     (lml-write-string +html5-dtd-string+))
     (:html
      (lml-write-string +html4-dtd-string+)))
   (lml-write-char #\newline))
@@ -91,10 +91,11 @@
                     :direction :output
                     :if-exists :supersede)
      (dtd-prologue ,format ,encoding)
-     (html
-      ((:html :xmlns "http://www.w3.org/1999/xhtml")
-       ,@body))))
-
+     (case ,format
+       ((:xhtml :xhtml11 :xhtml10-strict :xhtml10-transitional :xhtml10-frameset :xml)
+        (html ((:html :xmlns "http://www.w3.org/1999/xhtml") ,@body)))
+       (:html5 (html (:html ,@body)))
+       )))
 
 (defmacro alink (url desc)
   `(html

@@ -8,11 +8,39 @@ besides the =<!DOCTYPE html>= declaration nothing else HTML5 specific
 is supported. I aim to gradually introduce support for all the HTML5
 new tags and attributtes.
 
+Currently besides the *HTML5* doctype, i.e., =<!DOCTYPE html>=, the
+following tags are supported:
+
++ <article> =:article=
+
++ <aside> =:aside=
+
++ <audio> =:audio=
+
++ <figure> =:figure=
+
++ <footer> =:footer=
+
++ <header> =:header=
+
++ <hgroup> =:hgroup=
+
++ <mark> =:mark=
+
++ <nav> =:nav=
+
++ <section> =:section=
+
++ <source> =:source=
+
++ <time> =:time=
+
++ <video> =:video=
+
 This fork was created from the [[http://packages.debian.org/sid/cl-lml2][Debian unstable]] cl-lml2 package.
 
 To use the HTML5 document type give as first argument to
 =html-file-page= the following:
-
 
 =(html-file-page (<other args> :format :html5 <more args>)=
 
@@ -22,5 +50,3 @@ encoding through the keyword argument =:encoding= to =html-file-page=.
 To declare a *XHTML 1.0 Strict* document you would give:
 
 =(html-file-page (<other args> :format :xhtml-strict :encoding :utf-8 <more args>)=
-
-
