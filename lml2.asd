@@ -27,7 +27,7 @@
   :maintainer "Kevin M. Rosenberg <kmr@debian.org>"
   :licence "GNU General Public License"
   :description "Lisp Markup Language"
-  :long-description "LML2 provides creation of XHTML for Lisp programs."
+  :long-description "LML2 provides creation of XHTML and HTML5 for Lisp programs."
 
   :depends-on (kmrcl)
 
