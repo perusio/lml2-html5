@@ -1,7 +1,7 @@
 ** What is this?
 
-A fork of the [[lml2][LML2]] Common Lisp Markup Language that aims to fully
-support HTML5.
+A fork of the [[http://lml2.b9.com][LML2]] Common Lisp Markup Language by Kevin Rosenberg that
+aims to fully support [[http://html5rocks.com][HTML5]].
 
 For the time being only the *HTML5* doctype is supported, i.e.,
 besides the =<!DOCTYPE html>= declaration nothing else HTML5 specific
