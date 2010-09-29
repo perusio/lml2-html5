@@ -1,52 +1,67 @@
-** What is this?
+* What is this?
 
-A fork of the [[http://lml2.b9.com][LML2]] Common Lisp Markup Language by Kevin Rosenberg that
-aims to fully support [[http://html5rocks.com][HTML5]].
+  A fork of the [[http://lml2.b9.com][LML2]] Common Lisp Markup Language by Kevin Rosenberg that
+  aims to fully support [[http://html5rocks.com][HTML5]].
 
-For the time being only the *HTML5* doctype is supported, i.e.,
-besides the =<!DOCTYPE html>= declaration nothing else HTML5 specific
-is supported. I aim to gradually introduce support for all the HTML5
-new tags and attributtes.
+** HTML5 Document type
 
-Currently besides the *HTML5* doctype, i.e., =<!DOCTYPE html>=, the
-following tags are supported:
+   The *HTML5* document type is supported, i.e., =<!DOCTYPE html>=. 
 
-+ <article> =:article=
+** Supported elements
 
-+ <aside> =:aside=
+   + <article> =:article=
 
-+ <audio> =:audio=
+   + <aside> =:aside=
 
-+ <figure> =:figure=
+   + <audio> =:audio=
 
-+ <footer> =:footer=
+   + <figure> =:figure=
 
-+ <header> =:header=
+   + <footer> =:footer=
 
-+ <hgroup> =:hgroup=
+   + <header> =:header=
 
-+ <mark> =:mark=
+   + <hgroup> =:hgroup=
 
-+ <nav> =:nav=
+   + <mark> =:mark=
 
-+ <section> =:section=
+   + <nav> =:nav=
 
-+ <source> =:source=
+   + <section> =:section=
 
-+ <time> =:time=
+   + <source> =:source=
 
-+ <video> =:video=
+   + <time> =:time=
 
-This fork was created from the [[http://packages.debian.org/sid/cl-lml2][Debian unstable]] cl-lml2 package.
+   + <video> =:video=
 
-To use the HTML5 document type give as first argument to
-=html-file-page= the following:
+   This fork was created from the [[http://packages.debian.org/sid/cl-lml2][Debian unstable]] cl-lml2 package.
 
-=(html-file-page (<other args> :format :html5 <more args>)=
+** Specifying HTML5 documents
 
-Besides supporting HTML5 this fork also supports specifying the
-encoding through the keyword argument =:encoding= to =html-file-page=.
+   To use the HTML5 document type give as first argument to
+   =html-file-page= the following:
 
-To declare a *XHTML 1.0 Strict* document you would give:
+   =(html-file-page (<other args> :format :html5 <more args> )=
 
-=(html-file-page (<other args> :format :xhtml-strict :encoding :utf-8 <more args>)=
+** Language specification
+
+   There's also support for language specification, i.e., ISO code and
+   writing direction. By default the language is *en-US* and the
+   direction *ltr* (left-to-right). The language is specified as a
+   keyword argument in the argument list to =html-file-page=.
+
+   For specifying european portuguese do: 
+
+   =(html-file-page (<filename> :format :html5 :language "pt-PT")= 
+
+   Note that this specification is valid for other document types also.
+
+** XHTML encoding
+
+   Besides supporting HTML5 this fork also supports specifying the
+   encoding through the keyword argument =:encoding= to =html-file-page=.
+
+   To declare a *XHTML 1.0 Strict* document you would give:
+
+   =(html-file-page (<other args> :format :xhtml-strict :encoding :utf-8 <more args>)=
