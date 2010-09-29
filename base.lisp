@@ -84,7 +84,8 @@
   (lml-write-char #\newline))
 
 
-(defmacro html-file-page ((out-file &key (format :xhtml11) (encoding :utf-8))
+(defmacro html-file-page ((out-file &key (format :xhtml11) (encoding :utf-8)
+                                    (language "en-US") (direction "ltr"))
                           &body body)
   `(with-open-file (*html-stream*
                     (lml-file-name ',out-file :output)
@@ -94,7 +95,7 @@
      (case ,format
        ((:xhtml :xhtml11 :xhtml10-strict :xhtml10-transitional :xhtml10-frameset :xml)
         (html ((:html :xmlns "http://www.w3.org/1999/xhtml") ,@body)))
-       (:html5 (html (:html ,@body)))
+       (:html5 (html ((:html :lang ,language :dir ,direction) ,@body)))
        )))
 
 (defmacro alink (url desc)
