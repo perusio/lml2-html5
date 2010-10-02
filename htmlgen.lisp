@@ -807,6 +807,7 @@
 (def-std-html :aside t nil)
 (def-std-html :audio t nil)
 (def-std-html :figure t nil)
+(def-std-html :figcaption t nil)
 (def-std-html :footer t nil)
 (def-std-html :header t nil)
 (def-std-html :hgroup t nil)

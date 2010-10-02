@@ -17,6 +17,8 @@
 
    + <figure> =:figure=
 
+   + <figcaption> =:figcaption=
+
    + <footer> =:footer=
 
    + <header> =:header=
