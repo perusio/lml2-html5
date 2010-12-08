@@ -1,13 +1,13 @@
 Source: cl-lml2
 Section: lisp
 Priority: optional
-Maintainer: Kevin M. Rosenberg <kmr@debian.org>
+Maintainer: António P. P. Almeida <appa@perusio.net>
 Build-Depends-Indep: dh-lisp
 Build-Depends: debhelper (>> 7.0.0)
 Standards-Version: 3.8.3.0
 Homepage: http://lml2.b9.com/
-Vcs-Git: git://git.b9.com/lml2.git
-Vcs-Browser: http://git.b9.com/?p=lml2.git
+Vcs-Git: git://github.com/perusio/lml2-html5.git
+Vcs-Browser: https://github.com/perusio/lml2-html5
 
 Package: cl-lml2
 Architecture: all
@@ -17,3 +17,5 @@ Description: Lisp Markup Language
  .
  The usage of LML2 is incompatible with the original LML version. However,
  the two versions may be used along side each other.
+ .
+ This is a fork the original LML2 that supports HTML5 elements.
