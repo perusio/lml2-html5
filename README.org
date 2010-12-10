@@ -75,3 +75,8 @@
    To declare a *XHTML 1.0 Strict* document you would give:
 
    =(html-file-page (<other args> :format :xhtml-strict :encoding :utf-8 <more args>)=
+
+** Debian Repository
+
+   I maintain a [[http://debian.perusio.net/][debian repository]] with this package built for debian
+   *testing* or *unstable*.
